@@ -59,6 +59,7 @@ contract IkaToken is ERC20Interface {
         return _allowances[tokenOwner][spender];
     }
     
+    //Approval
     function approve(address spender, uint256 tokens) public virtual override returns (bool){
         _allowances[msg.sender][spender] = tokens;
         emit Approval(msg.sender, spender, tokens);
